@@ -1,5 +1,4 @@
 const express = require('express');
-const https = require('https');
 const axios = require('axios');
 const cors = require('cors');
 require('dotenv').config();
@@ -64,6 +63,8 @@ app.get('/weather', async (req, res) => {
       res.status(500).json({ error: error.message });
     }
 });
+
+app.get('/', (req,res) => res.send("hello world"));
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);

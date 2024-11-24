@@ -1,0 +1,18 @@
+services:
+  server:
+    image: server
+    ports:
+      - 5000:5000
+    networks:
+      - weather-app
+  client:
+    image: client
+    ports:
+      - 3000:3000
+    networks:
+      - weather-app
+    stdin_open: true
+
+networks:
+  weather-app:
+    driver: bridge
