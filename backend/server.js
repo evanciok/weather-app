@@ -34,7 +34,6 @@ async function getWeather(location, lat, lon) {
     try {
       const response = await axios.get(weatherUrl);
       const data = response.data;
-      console.log(data);
       return {
         location: location,
         coordinates: `${lat}, ${lon}`,
@@ -63,8 +62,6 @@ app.get('/weather', async (req, res) => {
       res.status(500).json({ error: error.message });
     }
 });
-
-app.get('/', (req,res) => res.send("hello world"));
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
