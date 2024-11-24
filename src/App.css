@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+.App {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;  
+  height: 100vh;  
+  background-image: url('./components/assets/map-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease-in-out; 
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(255, 255, 255), 0 0 0.2em rgb(255, 255, 255);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  align-items: center;
+  gap: 10px;  
+  margin: 30px auto;
+  width: 100%;
+  max-width: 400px;  
+}
+
+input {
+  padding: 12px;
+  width: 100%;
+  max-width: 300px;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #007bff; 
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+button {
+  padding: 12px 20px;
+  width: 100%;
+  max-width: 300px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  background-color: #00408d;
+}
+
+.weather-container {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.weather-container h2 {
+  margin-bottom: 5px; 
+  text-transform: capitalize;
+}
+
+.weather-container .subtext {
+  font-size: 1.1rem;
+  margin-top: 0; 
+  margin-bottom: 0; 
+}
+
+.weather-container .datetime {
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.weather-container .temperature-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px; 
+  font-size: 2rem; 
+  font-weight: bold;
+}
+
+.weather-container .temperature-container .temp {
+  font-size: 3rem; 
+}
+
+.weather-container .temperature-container .feels-like {
+  font-size: 1.5rem; 
+  color: gray; 
+  font-weight: normal;
+}
+
+.weather-container .condition {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.weather-container .description {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.weather-container .humidity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+.weather-container .humidity-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.weather-container .description {
+  font-size: 1rem;
+  margin-top: 10px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+@media (min-width: 768px) {
+  .App {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .weather-container {
+    padding: 30px;
+  }
+
+  .weather-container p {
+    font-size: 1.4rem;
+  }
+}

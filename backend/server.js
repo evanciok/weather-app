@@ -33,9 +33,8 @@ async function getWeather(location, lat, lon) {
 
     try {
       const response = await axios.get(weatherUrl);
-      const data = await response.data;
-      console.log('Weather API response:', data); 
-      console.log('location:', location)
+      const data = response.data;
+      console.log(data);
       return {
         location: location,
         coordinates: `${lat}, ${lon}`,
@@ -53,9 +52,7 @@ async function getWeather(location, lat, lon) {
 }
 
 app.get('/weather', async (req, res) => {
-    console.log('Request URL:', req.url); 
     const { location } = req.query
-    console.log('Received location in backend:', location);
 
     try {
       const { lat, lon } = await getLatLon(location);

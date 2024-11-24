@@ -3,7 +3,7 @@ import rainDropIcon from './assets/rain-drop-icon.png';
 
 function DisplayWeather({ weatherData }) {
   if (!weatherData) {
-    return <p>No data available for the input location. Please try another.</p>;
+    return;
   }
 
   const formatCoordinates = (coords) => {
@@ -33,7 +33,7 @@ function DisplayWeather({ weatherData }) {
       </div>
       <p className="humidity">
         <img src={rainDropIcon} alt="humidity icon" className="humidity-icon" />
-        {weatherData.humidity}%
+        {weatherData.humidity}
       </p>
       <p className="description">{weatherData.description}</p>
       
