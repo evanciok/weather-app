@@ -39,6 +39,7 @@ function App() {
 
     fetch(`http://localhost:5000/weather?location=${encodeURIComponent(location)}`)
       .then((response) => {
+        console.log(response);
         if (!response.ok) {
           throw new Error('Location not found or invalid');
         }
