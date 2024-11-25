@@ -8,6 +8,8 @@ import tsBG from './components/assets/ts-bg.jpg';
 import snowBG from './components/assets/snowy-bg.jpg';
 import './App.css';
 
+const BACKEND_API_URL = process.env.BACKEND_API_URL;
+
 function App() {
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
@@ -37,7 +39,7 @@ function App() {
       return; 
     }
 
-    fetch(`http://localhost:5000/weather?location=${encodeURIComponent(location)}`)
+    fetch(`${BACKEND_API_URL}/weather?location=${encodeURIComponent(location)}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Location not found or invalid');

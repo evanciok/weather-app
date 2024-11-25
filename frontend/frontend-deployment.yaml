@@ -21,6 +21,9 @@ spec:
               cpu: "500m"
           ports:
             - containerPort: 3000
+          env:
+            - name: BACKEND_API_URL
+              value: "http://a5a0b4e6709e644cf87b76659c47a1e5-1765399624.us-east-2.elb.amazonaws.com:5000"
 
 ---
 apiVersion: v1
